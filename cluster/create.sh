@@ -2,7 +2,7 @@
 
 # create the environment
 terraform init
-terraform apply -auto-approve
+terraform apply --auto-approve
 
 export KOPS_STATE_STORE=s3://phud_terraform
 export NAME=phud.k8s.local

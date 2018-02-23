@@ -29,3 +29,7 @@ sudo mv linux-amd64/helm /usr/local/bin/helm
 rm -rf linux-amd64/
 rm terraform_0.11.2_linux_amd64.zip
 rm helm-v2.8.1-linux-amd64.tar.gz
+
+mkdir /home/ec2-user/.aws
+
+git clone https://github.com/disco-funk/terraform-aws

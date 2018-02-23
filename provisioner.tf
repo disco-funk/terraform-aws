@@ -21,6 +21,27 @@ resource "aws_instance" "phud_instance" {
       private_key = "${file("~/.ssh/phud_keypair.pem")}"
     }
   }
+
+  provisioner "file" {
+    source = "~/.ssh/phud_keypair.pub"
+    destination = "/home/ec2-user/.ssh/id_rsa.pub"
+    connection {
+      type = "ssh"
+      user = "ec2-user"
+      agent = false
+      private_key = "${file("~/.ssh/phud_keypair.pem")}"
+    }
+  }
+  provisioner "file" {
+    source = "~/.aws/credentials"
+    destination = "/home/ec2-user/.aws/credentials"
+    connection {
+      type = "ssh"
+      user = "ec2-user"
+      agent = false
+      private_key = "${file("~/.ssh/phud_keypair.pem")}"
+    }
+  }
 }
 
 resource "aws_security_group" "phud_ssh" {

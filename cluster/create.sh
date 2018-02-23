@@ -11,6 +11,4 @@ export AWS_PROFILE=default
 
 kops create cluster --name ${NAME} --zones eu-west-2a --state ${KOPS_STATE_STORE} --yes
 
-helm init
-
 echo "To check cluster - wait a couple of minutes, then: kops validate cluster --state=${KOPS_STATE_STORE}"

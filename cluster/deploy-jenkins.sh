@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+helm init
 helm install --name jenkins stable/jenkins
 
 export SERVICE_IP=$(kubectl get svc --namespace default jenkins-jenkins --template "{{ range (index .status.loadBalancer.ingress 0) }}{{ . }}{{ end }}")

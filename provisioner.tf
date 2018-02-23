@@ -13,7 +13,7 @@ resource "aws_instance" "phud_instance" {
     Name = "Phil Hudson Terraform"
   }
   provisioner "remote-exec" {
-    script = "./install-docker.sh"
+    script = "./cluster/configure.sh"
 
     connection {
       type = "ssh"

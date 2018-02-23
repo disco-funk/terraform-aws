@@ -2,7 +2,7 @@ Master:
   InstallPlugins:
     - workflow-multibranch
     - kubernetes
-    - workflow-aggregator
+    - workflow-aggregator:2.5
     - workflow-job
     - credentials-binding
     - git

@@ -1,3 +1,10 @@
+Master:
+  InstallPlugins:
+    - kubernetes
+    - workflow-aggregator
+    - workflow-job
+    - credentials-binding
+    - git
 Agent:
   volumes:
   - type: HostPath

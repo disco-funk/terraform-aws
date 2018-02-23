@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 helm init
+helm delete jenkins
 helm install --name jenkins stable/jenkins -f /home/ec2-user/terraform-aws/cluster/values.yaml
 
 export SERVICE_IP=$(kubectl get svc --namespace default jenkins-jenkins --template "{{ range (index .status.loadBalancer.ingress 0) }}{{ . }}{{ end }}")

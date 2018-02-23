@@ -1,5 +1,6 @@
 Master:
   InstallPlugins:
+    - workflow-multibranch
     - kubernetes
     - workflow-aggregator
     - workflow-job

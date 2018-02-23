@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "cluster_config" {
-  bucket = "phud_terraform"
+  bucket = "phud-terraform"
   acl = "private"
   tags {
     Name = "Phil Hudson Terraform"

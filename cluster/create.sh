@@ -4,7 +4,7 @@
 terraform init
 terraform apply --auto-approve
 
-export KOPS_STATE_STORE=s3://phud_terraform
+export KOPS_STATE_STORE=s3://phud-terraform
 export NAME=phud.k8s.local
 export AWS_DEFAULT_PROFILE=default
 export AWS_PROFILE=default

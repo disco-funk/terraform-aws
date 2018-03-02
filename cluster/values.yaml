@@ -6,6 +6,7 @@ Master:
     - workflow-job:2.17
     - credentials-binding:1.15
     - git:3.7.0
+    - pipeline-aws:1.23
 Agent:
   volumes:
   - type: HostPath

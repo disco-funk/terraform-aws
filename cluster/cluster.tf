@@ -56,3 +56,31 @@ resource "aws_iam_group_membership" "kops-iam-group-membership" {
 resource "aws_iam_access_key" "kops-key" {
   user = "${aws_iam_user.kops-user.name}"
 }
+
+resource "aws_ecr_repository" "alpha-global-app" {
+  name = "alpha-global-app"
+}
+
+resource "aws_ecr_repository" "alpha-global-config" {
+  name = "alpha-global-config"
+}
+
+resource "aws_ecr_repository" "alpha-market-config" {
+  name = "alpha-market-config"
+}
+
+resource "aws_ecr_repository" "vendor-app" {
+  name = "vendor-app"
+}
+
+resource "aws_ecr_repository" "vendor-blank-config" {
+  name = "vendor-blank-config"
+}
+
+resource "aws_ecr_repository" "vendor-configurer" {
+  name = "vendor-configurer"
+}
+
+resource "aws_ecr_repository" "vendor-db" {
+  name = "vendor-db"
+}

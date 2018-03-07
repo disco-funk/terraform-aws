@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export KOPS_STATE_STORE=s3://phud-terraform
+export KOPS_STATE_STORE=s3://phud
 export NAME=phud.k8s.local
 
 #get round a bug in terraform which does not delete non-empty buckets

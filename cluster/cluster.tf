@@ -1,3 +1,11 @@
+terraform {
+  backend "s3" {
+    bucket = "phud"
+    key    = "terraform-state"
+    region = "eu-west-2"
+  }
+}
+
 provider "aws" {
   region = "eu-west-2"
   shared_credentials_file = "~/.aws/credentials"

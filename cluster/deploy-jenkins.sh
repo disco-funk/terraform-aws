@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
 helm init
+
+kubectl create serviceaccount --namespace kube-system tiller
+kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
+kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'
+
 helm delete --purge jenkins
 helm install --name jenkins stable/jenkins -f /home/ec2-user/terraform-aws/cluster/values.yaml
 
